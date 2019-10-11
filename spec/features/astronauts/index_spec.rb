@@ -51,15 +51,15 @@ RSpec.describe "astronaut index page" do
     visit '/astronauts'
 
     within "#astronaut-#{neil_armstrong.id}" do
-      expect(page).to have_content("#{apollo_13} #{capricorn_4} #{kepler_mission}")
+      expect(page).to have_content("List of missions: #{apollo_13} #{capricorn_4} #{kepler_mission}")
     end
 
     within "#astronaut-#{buzz_aldrin.id}" do
-      expect(page).to have_content("#{capricorn_4} #{gemini_7} #{kepler_mission}")
+      expect(page).to have_content("List of missions: #{capricorn_4} #{gemini_7} #{kepler_mission}")
     end
 
     within "#astronaut-#{michael_collins.id}" do
-      expect(page).to have_content("#{apollo_13} #{gemini_7} #{voyager_1}")
+      expect(page).to have_content("List of missions: #{apollo_13} #{gemini_7} #{voyager_1}")
     end
   end
 end
