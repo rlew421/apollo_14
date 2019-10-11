@@ -27,7 +27,7 @@ RSpec.describe "astronaut index page" do
     expect(page).to have_content("Average age: 34.67")
   end
 
-  it "I can see a list of the space missions' in alphabetical order for each astronaut" do
+  it "I can see a list of the space missions in alphabetical order for each astronaut" do
     neil_armstrong = Astronaut.create(name: "Neil Armstrong", age: 37, job: "Commander")
     buzz_aldrin = Astronaut.create(name: "Buzz Aldrin", age: 35, job: "Pilot")
     michael_collins = Astronaut.create(name: "Michael Collins", age: 32, job: "Test Pilot")
