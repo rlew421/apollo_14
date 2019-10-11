@@ -8,14 +8,15 @@ RSpec.describe "astronaut index page" do
 
     visit'/astronauts'
 
-    expect(page).to have_content(neil_armstrong.name)
-    expect(page).to have_content(neil_armstrong.age)
-    expect(page).to have_content(neil_armstrong.job)
-    expect(page).to have_content(buzz_aldrin.name)
-    expect(page).to have_content(buzz_aldrin.age)
-    expect(page).to have_content(buzz_aldrin.job)
-    expect(page).to have_content(michael_collins.job)
-    expect(page).to have_content(michael_collins.job)
-    expect(page).to have_content(michael_collins.job)
+    expect(page).to have_content("Name: #{neil_armstrong.name}")
+    expect(page).to have_content("Age: #{neil_armstrong.age}")
+    expect(page).to have_content("Job: #{neil_armstrong.job}")
+    expect(page).to have_content("Name: #{buzz_aldrin.name}")
+    expect(page).to have_content("Age: #{buzz_aldrin.age}")
+    expect(page).to have_content("Job: #{buzz_aldrin.job}")
+    expect(page).to have_content("Name: #{michael_collins.name}")
+    expect(page).to have_content("Age: #{michael_collins.age}")
+    expect(page).to have_content("Job: #{michael_collins.job}")
+    expect(page).to have_content("Average age: 34.67")
   end
 end
